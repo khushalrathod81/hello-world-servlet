@@ -13,7 +13,6 @@
 
   <reporting>
     <plugins>
-      <!-- Removed Cobertura -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
@@ -47,7 +46,6 @@
   </reporting>
 
   <dependencies>
-    <!-- Modern Servlet API -->
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
@@ -55,7 +53,6 @@
       <scope>provided</scope>
     </dependency>
 
-    <!-- JUnit (latest JUnit 4) -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -67,7 +64,6 @@
   <build>
     <finalName>helloworld</finalName>
     <plugins>
-      <!-- Compiler plugin set to Java 17 -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -78,7 +74,6 @@
         </configuration>
       </plugin>
 
-      <!-- JaCoCo plugin for code coverage -->
       <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
@@ -112,7 +107,6 @@
         </configuration>
       </plugin>
 
-      <!-- Docker plugin stays the same -->
       <plugin>
         <groupId>org.jolokia</groupId>
         <artifactId>docker-maven-plugin</artifactId>
@@ -146,13 +140,14 @@
   </build>
 
   <distributionManagement>
-  <repository>
-    <id>releases</id>
-    <url>http://35.207.210.72:8081/repository/maven-releases/</url>
-  </repository>
-  <snapshotRepository>
-    <id>snapshots</id>
-    <url>http://35.207.210.72:8081/repository/maven-snapshots/</url>
-  </snapshotRepository>
-</distributionManagement>
+    <repository>
+      <id>releases</id>
+      <url>http://35.207.210.72:8081/repository/maven-releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshots</id>
+      <url>http://35.207.210.72:8081/repository/maven-snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
 
+</project>
